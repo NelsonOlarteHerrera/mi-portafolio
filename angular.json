@@ -20,7 +20,11 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"],
+              "src/assets",{
+                "glob": "index.html",
+                "input": "dist/mi-portafolio",
+                "output": "./404.html"
+              }],
             "styles": ["src/styles.css"],
             "scripts": []
           },
