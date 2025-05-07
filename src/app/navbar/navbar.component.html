@@ -1,0 +1,39 @@
+<nav class="bg-white dark:bg-gray-900 px-6 py-4 shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">Mi Portafolio</div>
+
+    <!-- Botón hamburguesa (solo en móvil) -->
+    <button (click)="menuAbierto = !menuAbierto"
+            class="md:hidden text-gray-700 dark:text-gray-200 focus:outline-none text-2xl">
+      <i [class]="menuAbierto ? 'fas fa-times' : 'fas fa-bars'"></i>
+    </button>
+
+    <!-- Menú desktop -->
+    <ul class="hidden md:flex space-x-6 text-lg font-medium">
+      <li><a routerLink="/" routerLinkActive="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 pb-1"
+        class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all">Inicio</a></li>
+      <li><a routerLink="/sobre-mi" routerLinkActive="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 pb-1"
+        class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all">Sobre mí</a></li>
+      <li><a routerLink="/habilidades" routerLinkActive="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 pb-1"
+        class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all">Habilidades</a></li>
+      <li><a routerLink="/curriculum" routerLinkActive="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 pb-1"
+        class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all">Currículum</a></li>
+      <li><a routerLink="/portafolio" routerLinkActive="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 pb-1"
+        class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all">Portafolio</a></li>
+      <li><a routerLink="/contacto" routerLinkActive="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 pb-1"
+        class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- Menú móvil -->
+  <div *ngIf="menuAbierto" class="md:hidden mt-4 space-y-2 px-4 text-lg font-medium transition-all duration-300 ease-in-out">
+    <a routerLink="/" (click)="menuAbierto = false" class="block text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">Inicio</a>
+    <a routerLink="/sobre-mi" (click)="menuAbierto = false" class="block text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">Sobre mí</a>
+    <a routerLink="/habilidades" (click)="menuAbierto = false" class="block text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">Habilidades</a>
+    <a routerLink="/curriculum" (click)="menuAbierto = false" class="block text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">Currículum</a>
+    <a routerLink="/portafolio" (click)="menuAbierto = false" class="block text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">Portafolio</a>
+    <a routerLink="/contacto" (click)="menuAbierto = false" class="block text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">Contacto</a>
+  </div>
+</nav>

@@ -1,0 +1,16 @@
+/* Animación de entrada suave cuando la sección aparece en pantalla */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Empieza desplazado hacia abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su posición original */
+  }
+}
+
+/* Aplica la animación a toda la sección "Inicio" */
+section {
+  animation: fadeInUp 0.6s ease-out;
+}

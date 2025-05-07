@@ -1,0 +1,40 @@
+/* Animación de entrada suave cuando la sección aparece en pantalla */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Empieza desplazado hacia abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su posición original */
+  }
+}
+
+/* Aplica la animación a toda la sección "Habilidades" */
+section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+
+/* Tarjetas de habilidad con efecto de escala al hacer hover */
+.skill-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los badges de tecnologías */
+.skill-badge {
+  padding: 0.4rem 0.8rem;
+  font-weight: 500;
+  border-radius: 9999px; /* Forma pill */
+  transition: background-color 0.3s ease;
+}
+
+/* Cambio de color de fondo al hacer hover en badges */
+.skill-badge:hover {
+  background-color: rgba(59, 130, 246, 0.2); /* azul claro (equivale a blue-500 con opacidad) */
+}

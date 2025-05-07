@@ -1,0 +1,49 @@
+/* ============================================
+   Estilos para la sección de contacto
+   ============================================ */
+
+/* ✅ Animación suave de aparición del formulario */
+@keyframes fadeInGrid {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+section {
+  animation: fadeInGrid 0.5s ease-in;
+}
+
+/* ✅ Estilo para campos de entrada al enfocar */
+input:focus,
+textarea:focus {
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✅ Sombra al pasar el mouse sobre el botón de envío */
+button[type="submit"]:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Mensajes de error (texto rojo y tamaño pequeño) */
+.text-red-500 {
+  font-size: 0.875rem; /* equivalente a text-sm */
+}
+
+/* ✅ Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 640px) {
+  input,
+  textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
